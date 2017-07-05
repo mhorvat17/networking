@@ -11,6 +11,8 @@ answer = input("Do you want to: \n 1. Get the Device Facts \n 2. Get the Device 
 for creds in devices[1:]:
   password = base64.b64decode(creds[3])
   if answer == '1':
+    print ("Getting your device facts for " + creds[0])
     fn_get_facts(creds[0],creds[1],creds[2],password)
   if answer == '2':
-        fn_get_bgp_neighbors(creds[0],creds[1],creds[2],password)
+      print ("Getting your device bgp neighbors for " + creds[0])
+      fn_get_bgp_neighbors(creds[0],creds[1],creds[2],password)
